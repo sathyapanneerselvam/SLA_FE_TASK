@@ -1,0 +1,14 @@
+table {
+    margin: auto;
+    border-collapse: collapse; 
+    width: 80%; }
+th:first-child, th:last-child {
+    background-color: red; 
+}
+
+td:first-child, td:last-child {
+    background-color: red; 
+}
+th,td{
+padding:15px;
+}

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .f{
+            display: block;
+            justify-content: center;
+        }
+        body{
+            background-color: green;
+            color: whitesmoke;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        p{
+            display: inline;
+        }
+         #hd{
+            display: inline-block;
+         }
+         .btn{
+            margin-left: 50%;
+
+         }
+         button{
+            border-radius: 5px;
+         }
+    </style>
+</head>
+<body>
+    <div class="f">
+    <form action="register.php" method="post">
+        <label id="h" for="fname" style="margin-right: 60px;">FIRST NAME </label>
+        <input type="text" name="fname" id="fname">
+        <p>&#40 max 30 characters a-z and A-Z &#41</p>
+        <br>
+        <br>
+        <label id="h" for="lname" style="margin-right: 64px;">LAST NAME</label>
+        <input type="text" name="lname" id="lname">
+        <p>&#40 max 30 characters a-z and A-Z &#41</p>
+        <br>
+        <br>
+        <label id="h" for="dob" style="margin-right: 40px;">DATE OF BIRTH </label>
+        <input type="date" name="dob" id="dob">
+        <br>
+        <br>
+        <label id="h" for="mail" style="margin-right: 85px;">EMAIL ID</label>
+        <input type="text" name="mail" id="mail">
+        <br>
+        <br>
+        <label id="h" for="mob" style="margin-right: 20px;">MOBILE NUMBER</label>
+        <input type="text" name="mob" id="mob">
+        <p>&#40 10 digit number &#41</p>
+        <br>
+        <br>
+        <label id="h" for="gen" style="margin-right: 90px;">GENDER</label>
+        <label for="male">Male</label>
+        <input type="radio" name="gen" id="male">
+        <label for="female">Female</label>
+        <input type="radio" name="gen" id="female">
+        <br>
+        <br>
+        <label id="h" for="address" style="margin-right: 80px;">ADDRESS</label>
+        <textarea name="address" id="address"></textarea><br><br>
+        <label id="h" for="city" style="margin-right: 115px;">CITY</label>
+        <input type="text" name="city" id="city">
+        <p> &#40 max 30 characters a-z and A-Z &#41 </p>
+        <br>
+        <br>
+        <label id="h" for="pin" style="margin-right: 81px;">PINCODE</label>
+        <input type="text" name="pin" id="pin">
+        <p> &#40 6 digit number &#41 </p>
+        <br>
+        <br>
+        <label id="h" for="state" style="margin-right: 102px;">STATE</label>
+        <input type="text" name="state" id="state">
+        <p> &#40 max 30 characters a-z and A-Z &#41 </p>
+        <br>
+        <br>
+        <label id="h" for="cnt" style="margin-right: 75px;">COUNTRY</label>
+        <input type="text" name="cnt" id="cnt" value="India">
+        <br>
+        <br>
+        <label id="h" for="hobby"style="margin-right: 80px;">HOBBIES</label>
+        <label for="drawing">Drawing</label>
+        <input type="checkbox" name="drawing" id="hobby">
+        <label for="singing">Singing</label>
+        <input type="checkbox" name="singing" id="hobby">
+        <label for="dancing">Dancing</label>
+        <input type="checkbox" name="dancing" id="hobby">
+        <label for="sketch">Sketching</label>
+        <input type="checkbox" name="sketch" id="hobby">
+        <label for="others">Others</label>
+        <input type="checkbox" name="others" id="hobby">
+        <input type="text" name="others" id="others">
+        <br>
+        <br>
+        <span id="hd" for="qualification" style="margin-right: 60px;">QUALIFICATION </span>
+        <table>
+            <tr>
+                <th>SI.No.</th>
+                <th>Examination</th>
+                <th>Board</th>
+                <th>Percentage</th>
+                <th>Year of Passing</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Class X</td>
+                <td><input type="text" name="" id=""></td>
+                <td><input type="text" name="" id=""></td>
+                <td><input type="text" name="" id=""></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Class XII</td>
+                <td><input type="text" name="" id=""></td>
+                <td><input type="text" name="" id=""></td>
+                <td><input type="text" name="" id=""></td>
+            </tr>
+            <tr>
+            <td>3</td>
+            <td>Graduation</td>
+            <td><input type="text" name="" id=""></td>
+            <td><input type="text" name="" id=""></td>
+            <td><input type="text" name="" id=""></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Masters</td>
+            <td><input type="text" name="" id=""></td>
+            <td><input type="text" name="" id=""></td>
+            <td><input type="text" name="" id=""></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td><p> &#40 10 char max &#41 </p></td>
+            <td><p> &#40 upto 2 decimal &#41 </p></td>
+            <td></td>
+        </tr>
+        </table>
+   
+        <br>
+        <br>
+        <label id="h" for="course" style="margin-right: 20px;">COURSES APPLIED FOR &nbsp &nbsp </label>
+        <label for="bca">BCA</label>
+        <input type="radio" name="course" id="bca">
+        <label for="bcom">B.Com</label>
+        <input type="radio" name="course" id="bcom">
+        <label for="bsc">B.Sc</label>
+        <input type="radio" name="course" id="bsc">
+        <label for="ba">B.A</label>
+        <input type="radio" name="course" id="ba">
+        <br>
+        <br>
+        <label for="res">Upload your resume</label>
+        <input type="file" name="res" id="res">
+        <div class="btn">
+        <button id="submit">Submit</button>
+        <button id="reset">Reset</button>
+        </div>
+        
+    </form>
+    <!-- Separate form for logout -->
+<form action="logout.php" method="post" style="margin-top: 20px;">
+    <button type="submit" style="background-color: red; color: white; padding: 10px 20px; border: none; border-radius: 5px;">Logout</button>
+</form>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("submit").addEventListener("click", function (event) {
+        event.preventDefault(); 
+        
+        let fname = document.getElementById("fname").value.trim();
+        let lname = document.getElementById("lname").value.trim();
+        let dob = document.getElementById("dob").value;
+        let email = document.getElementById("mail").value.trim();
+        let mobile = document.getElementById("mob").value.trim();
+        let city = document.getElementById("city").value.trim();
+        let pin = document.getElementById("pin").value.trim();
+        let state = document.getElementById("state").value.trim();
+        let country = document.getElementById("cnt").value.trim();
+        let gender = document.querySelector("input[name='gen']:checked");
+        let course = document.querySelector("input[name='course']:checked");
+        
+        let namePattern = /^[A-Za-z ]{1,30}$/;
+        let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        let mobilePattern = /^[0-9]{10}$/;
+        let pinPattern = /^[0-9]{6}$/;
+
+        if (!namePattern.test(fname)) {
+            alert("First name should contain only letters and be up to 30 characters.");
+            return;
+        }
+        
+        if (!namePattern.test(lname)) {
+            alert("Last name should contain only letters and be up to 30 characters.");
+            return;
+        }
+        
+        if (!dob) {
+            alert("Please enter your Date of Birth.");
+            return;
+        }
+        
+        if (!emailPattern.test(email)) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+        
+        if (!mobilePattern.test(mobile)) {
+            alert("Mobile number should be exactly 10 digits.");
+            return;
+        }
+        
+        if (!namePattern.test(city)) {
+            alert("City should contain only letters and be up to 30 characters.");
+            return;
+        }
+        
+        if (!pinPattern.test(pin)) {
+            alert("Pincode should be exactly 6 digits.");
+            return;
+        }
+        
+        if (!namePattern.test(state)) {
+            alert("State should contain only letters and be up to 30 characters.");
+            return;
+        }
+        
+        if (!country) {
+            alert("Please enter your country.");
+            return;
+        }
+        
+        if (!gender) {
+            alert("Please select your gender.");
+            return;
+        }
+        
+        if (!course) {
+            alert("Please select your course.");
+            return;
+        }
+        
+        alert("Form submitted successfully!");
+        document.querySelector("form").submit();
+    });
+
+    document.getElementById("reset").addEventListener("click", function () {
+        document.querySelector("form").reset();
+    });
+});
+
+</script>
+</body>
+</html>

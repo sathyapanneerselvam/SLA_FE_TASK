@@ -1,0 +1,119 @@
+mysql> create table task3_nobel_win(YEAR date, SUBJECT varchar(30), WINNER varchar(30), COUNTRY varchar(30),CATEGORY varchar(30));
+Query OK, 0 rows affected (0.26 sec)
+
+mysql> desc task3_nobel_win;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| YEAR     | date        | YES  |     | NULL    |       |
+| SUBJECT  | varchar(30) | YES  |     | NULL    |       |
+| WINNER   | varchar(30) | YES  |     | NULL    |       |
+| COUNTRY  | varchar(30) | YES  |     | NULL    |       |
+| CATEGORY | varchar(30) | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+5 rows in set (0.06 sec)
+
+mysql> insert into task3_nobel_win values (1970,Physics,Hannes Alfven,Sweden,Scientist),(1970,Physics,Louis Neel,France,Scientist),(1970,Chemistry,Luis Federico Leloir,France,Scientist),(1970,Physiology,Ulf von Euler,Sweden,Scientist),(1970,Physiology, Bernard Katz,Germany,Scientist),(1970,Literature,Aleksandr Solzhenitsyn,Russia,Linguist),(1970,Economics,Paul Samuelson,USA,Economist),(1970,Physiology,Julius Axelrod,USA,Scientist),(1971,Physics,Dennis Gabor,Hungary,Scientist);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Alfven,Sweden,Scientist),(1970,Physics,Louis Neel,France,Scientist),(1970,Chemis' at line 1
+mysql> insert into task3_nobel_win values (1970,Physics,Hannes Alfven,Sweden,Scientist),(1970,Physics,Louis Neel,France,Scientist),(1970,Chemistry,Luis Federico Leloir,France,Scientist),(1970,Physiology,Ulf von Euler,Sweden,Scientist),(1970,Physiology, Bernard Katz,Germany,Scientist),(1970,Literature,Aleksandr Solzhenitsyn,Russia,Linguist),(1970,Economics,Paul Samuelson,USA,Economist),(1970,Physiology,Julius Axelrod,USA,Scientist),(1971,Physics,Dennis Gabor,Hungary,Scientist);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Alfven,Sweden,Scientist),(1970,Physics,Louis Neel,France,Scientist),(1970,Chemis' at line 1
+mysql> INSERT INTO task3_nobel_win
+    -> VALUES
+    -> (1970, 'Physics', 'Hannes Alfven', 'Sweden', 'Scientist'),
+    -> (1970, 'Physics', 'Louis Neel', 'France', 'Scientist'),
+    -> (1970, 'Chemistry', 'Luis Federico Leloir', 'France', 'Scientist'),
+    -> (1970, 'Physiology', 'Ulf von Euler', 'Sweden', 'Scientist'),
+    -> (1970, 'Physiology', 'Bernard Katz', 'Germany', 'Scientist'),
+    -> (1970, 'Literature', 'Aleksandr Solzhenitsyn', 'Russia', 'Linguist'),
+    -> (1970, 'Economics', 'Paul Samuelson', 'USA', 'Economist'),
+    -> (1970, 'Physiology', 'Julius Axelrod', 'USA', 'Scientist'),
+    -> (1971, 'Physics', 'Dennis Gabor', 'Hungary', 'Scientist');
+ERROR 1292 (22007): Incorrect date value: '1970' for column 'YEAR' at row 1
+mysql> INSERT INTO task3_nobel_win VALUES (1970, 'Physics', 'Hannes Alfven', 'Sweden', 'Scientist'),(1970, 'Physics', 'Louis Neel', 'France', 'Scientist'),(1970, 'Chemistry', 'Luis Federico Leloir', 'France', 'Scientist'),(1970, 'Physiology', 'Ulf von Euler', 'Sweden', 'Scientist'),(1970, 'Physiology', 'Bernard Katz', 'Germany', 'Scientist'),(1970, 'Literature', 'Aleksandr Solzhenitsyn', 'Russia', 'Linguist'),(1970, 'Economics', 'Paul Samuelson', 'USA', 'Economist'),(1970, 'Physiology', 'Julius Axelrod', 'USA', 'Scientist'),(1971, 'Physics', 'Dennis Gabor', 'Hungary', 'Scientist');
+ERROR 1292 (22007): Incorrect date value: '1970' for column 'YEAR' at row 1
+mysql> DROP task3_nobel_win;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'task3_nobel_win' at line 1
+mysql> ALTER TABLE task3_nobel_win MODIFY YEAR YEAR(4);
+Query OK, 0 rows affected, 1 warning (0.19 sec)
+Records: 0  Duplicates: 0  Warnings: 1
+
+mysql> INSERT INTO task3_nobel_win VALUES (1970, 'Physics', 'Hannes Alfven', 'Sweden', 'Scientist'),(1970, 'Physics', 'Louis Neel', 'France', 'Scientist'),(1970, 'Chemistry', 'Luis Federico Leloir', 'France', 'Scientist'),(1970, 'Physiology', 'Ulf von Euler', 'Sweden', 'Scientist'),(1970, 'Physiology', 'Bernard Katz', 'Germany', 'Scientist'),(1970, 'Literature', 'Aleksandr Solzhenitsyn', 'Russia', 'Linguist'),(1970, 'Economics', 'Paul Samuelson', 'USA', 'Economist'),(1970, 'Physiology', 'Julius Axelrod', 'USA', 'Scientist'),(1971, 'Physics', 'Dennis Gabor', 'Hungary', 'Scientist');
+Query OK, 9 rows affected (0.03 sec)
+Records: 9  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM task3_nobel_win WHERE YEAR = 1970;
++------+------------+------------------------+---------+-----------+
+| YEAR | SUBJECT    | WINNER                 | COUNTRY | CATEGORY  |
++------+------------+------------------------+---------+-----------+
+| 1970 | Physics    | Hannes Alfven          | Sweden  | Scientist |
+| 1970 | Physics    | Louis Neel             | France  | Scientist |
+| 1970 | Chemistry  | Luis Federico Leloir   | France  | Scientist |
+| 1970 | Physiology | Ulf von Euler          | Sweden  | Scientist |
+| 1970 | Physiology | Bernard Katz           | Germany | Scientist |
+| 1970 | Literature | Aleksandr Solzhenitsyn | Russia  | Linguist  |
+| 1970 | Economics  | Paul Samuelson         | USA     | Economist |
+| 1970 | Physiology | Julius Axelrod         | USA     | Scientist |
++------+------------+------------------------+---------+-----------+
+8 rows in set (0.02 sec)
+
+mysql> SELECT YEAR, SUBJECT, WINNER FROM task3_nobel_win WHERE YEAR = 1970;
++------+------------+------------------------+
+| YEAR | SUBJECT    | WINNER                 |
++------+------------+------------------------+
+| 1970 | Physics    | Hannes Alfven          |
+| 1970 | Physics    | Louis Neel             |
+| 1970 | Chemistry  | Luis Federico Leloir   |
+| 1970 | Physiology | Ulf von Euler          |
+| 1970 | Physiology | Bernard Katz           |
+| 1970 | Literature | Aleksandr Solzhenitsyn |
+| 1970 | Economics  | Paul Samuelson         |
+| 1970 | Physiology | Julius Axelrod         |
++------+------------+------------------------+
+8 rows in set (0.01 sec)
+
+mysql> CREATE TABLE task3_item_mast(PRO_ID INT,PRO_NAME VARCHAR(30),PRO_PRICE DECIMAL, PRO_COM INT);
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> DESC task3_item_mast;
++-----------+---------------+------+-----+---------+-------+
+| Field     | Type          | Null | Key | Default | Extra |
++-----------+---------------+------+-----+---------+-------+
+| PRO_ID    | int           | YES  |     | NULL    |       |
+| PRO_NAME  | varchar(30)   | YES  |     | NULL    |       |
+| PRO_PRICE | decimal(10,0) | YES  |     | NULL    |       |
+| PRO_COM   | int           | YES  |     | NULL    |       |
++-----------+---------------+------+-----+---------+-------+
+4 rows in set (0.04 sec)
+
+mysql> INSERT INTO task3_item_mast VALUES(101,'Mother Board',3200.00,15),(102,'Key Board',450.00,16),(103,'ZIP drive',250.00,14),(104,'Speaker',550.00,16),(105,'Monitor',5000.00,11),(106,'DVD drive',900.00,12),(107,'CD drive',800.00,12),(108 'Printer',2600.00,13),(109,'Refill cartridge',350.00,13),( 110,'Mouse',250.00,12);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''Printer',2600.00,13),(109,'Refill cartridge',350.00,13),( 110,'Mouse',250.00,12' at line 1
+mysql> INSERT INTO task3_item_mast VALUES(101,'Mother Board',3200.00,15),(102,'Key Board',450.00,16),(103,'ZIP drive',250.00,14),(104,'Speaker',550.00,16),(105,'Monitor',5000.00,11),(106,'DVD drive',900.00,12),(107,'CD drive',800.00,12),(108 ,'Printer',2600.00,13),(109,'Refill cartridge',350.00,13),( 110,'Mouse',250.00,12);
+Query OK, 10 rows affected (0.03 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM   task3_item_mast VALUES;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VALUES' at line 1
+mysql> SELECT * FROM   task3_item_mast;
++--------+------------------+-----------+---------+
+| PRO_ID | PRO_NAME         | PRO_PRICE | PRO_COM |
++--------+------------------+-----------+---------+
+|    101 | Mother Board     |      3200 |      15 |
+|    102 | Key Board        |       450 |      16 |
+|    103 | ZIP drive        |       250 |      14 |
+|    104 | Speaker          |       550 |      16 |
+|    105 | Monitor          |      5000 |      11 |
+|    106 | DVD drive        |       900 |      12 |
+|    107 | CD drive         |       800 |      12 |
+|    108 | Printer          |      2600 |      13 |
+|    109 | Refill cartridge |       350 |      13 |
+|    110 | Mouse            |       250 |      12 |
++--------+------------------+-----------+---------+
+10 rows in set (0.00 sec)
+
+mysql> SELECT COUNT(*) FROM  task3_item_mast WHERE PRO_PRICE >= 350;
++----------+
+| COUNT(*) |
++----------+
+|        8 |
++----------+
+1 row in set (0.03 sec)

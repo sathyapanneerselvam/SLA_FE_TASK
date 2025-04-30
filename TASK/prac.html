@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <!-- <script>
+        console.log("hello")
+        const makeupKit = ([
+            ["powder","compact"],
+            ["eyemakeup","kajal"],
+            ["eyebrows","pencil"],
+        ])
+        console.log(makeupKit.set("lipstick","liquid Lipsticks"));
+        makeupKit.get("powder");
+        let makeup = " ";
+        makeupKit.forEach(function(value,key){
+            makeup += key + " = " + value + "<br>"
+        })
+     </script> -->
+     <!-- <script>
+        const fruits = [
+            {name:"apple",quantity : 9},
+            {name:"pineapple",quantity : 5}
+        ];
+        function callback({quantity}){
+            return quantity > 7 ? "ok" : "low";
+        }
+        
+        
+     </script> -->
+     <!-- <script>
+        const person = {
+            firstName : "sathya",
+            lastname :"panneer selvam",
+            age : 23,
+            language:"english",
+            get lang(){
+                return this.language;
+            }
+            // set lang(value){
+            //     this.language = value;
+            // }
+        };
+        document.getElementById("h1").innerHTML=person.lang;
+     </script> -->
+     <!-- <script>
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  language: "en",
+  get lang() {
+    return this.language;
+  }
+}
+document.getElementById("demo").innerHTML = person.lang;
+     </script>
+      <p id="h1"></p> -->
+      <!-- <script>
+        const obj = {counter:0};
+        Object.defineProperty(obj,"reset",{
+            get: function(){this.counter=0;}
+        });
+        Object.defineProperty(obj, "increment",{
+            get:function(){this.counter++;}
+        });
+        Object.defineProperty(obj, "decrement",{
+            get:function(){this.counter--;}
+        });
+        Object.defineProperty(obj, "add",{
+            set:function(value){this.counter += value;}
+        });
+        Object.defineProperty(obj, "sub",{
+            set:function(value){this.counter -= value;}
+        });
+        
+      </script>-->
+      <!-- <script>
+        class fruits{
+            constructor(name,colour,days){
+                this.name=name;
+                this.colour=colour;
+                this.days=days;
+            }
+             lifetime(){
+                const lifetime = new Date();
+                return lifetime.getDate() - this.days; 
+             }
+        }
+        const kiwi = new fruits("kiwi","green",2);
+        console.log(kiwi.lifetime());
+        console.log(kiwi.name,kiwi.colour)
+      </script> -->
+      <p id="id"></p>
+      <script>
+        function display(some){
+            document.getElementById("id").innerHTML = some;
+        }
+        function calculate(n1,n2){
+        }
+      </script>
+      <script>
+        function mycalculator(callback){
+            let n1=4;
+            let n2=5;
+
+        }
+        function add(n1,n2){
+            
+            mycalculator(n1+n2);
+        }
+        function sub(n1,n2){
+            
+            mycalculator(n1-n2);
+        }
+        function mul(n1,n2){
+            
+            mycalculator(n1*n2);
+        }
+        function div(n1,n2){
+            mycalculator(n1/n2);
+        }
+        let operation = prompt("please enter the operation you want to did(add,mul,sub,div):")
+        if (operation == "add"){
+           mycalculator(add); 
+        }else if(operation == "sub"){
+            mycalculator(sub)
+        }else if(operation == "mul"){
+            mycalculator(mul);
+        }else{
+            mycalculator(div);
+        }
+        
+      </script>
+</body> 
+</html>

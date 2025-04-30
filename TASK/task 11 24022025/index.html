@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Scrolling Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+/* Navigation menu */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #007bff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+section {
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#home { background: #f4f4f4; }
+#about { background: #ddd; }
+#services { background: #bbb; }
+#contact { background: #999; }
+
+</style>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1>Home Section</h1>
+        <br>
+        <p>Welcome to our website!</p>
+    </section>
+
+    <section id="about">
+        <h1>About Us</h1>
+        <br>
+        <p>Learn more about us.</p>
+    </section>
+
+    <section id="services">
+        <h1>Our Services</h1>
+        <br>
+        <p>Check out what we offer.</p>
+    </section>
+
+    <section id="contact">
+        <h1>Contact Us</h1>
+        <br>
+        <p>Get in touch with us.</p>
+    </section>
+
+</body>
+</html>
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="std"></p>
+    <p class="res"></p>
+    <p id="see"></p>
+    <script>
+        function student(fname,lname,age,email,phoneNo,gender){
+            this.firstName = fname;
+            this.lastName = lname;
+            this.age = age;
+            this.email = email;
+            this.phoneNo = phoneNo;
+            this.gender = gender; 
+        }
+        const student1 = new student("lily","doe",20,"lily@gmail.com",1212121212,"female");
+        const student2 = new student("aurora","sunlight",19,"aurorasun@gmail.com",2323232323,"female");
+        const student3 = new student("Muruga","siva",21,"muruga@gmail.com",3434343434,"Male");
+        const student4 = new student("Beyoncy","bibi",25,"beyoncy@gmail.com",5656565656,"female");
+
+        document.getElementById("std").innerHTML = "lily's last name is " + student1.lastName;
+        document.getElementsByClassName("res").innerHTML = "aurora's mail id is " + student2.email;
+        document.getElementById("see").innerHTML = "Muruga's age is " + student3.age;
+    </script>
+    
+</body>
+</html>

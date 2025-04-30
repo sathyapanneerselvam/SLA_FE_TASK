@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        function countLetterOccurrences(str) {
+    let letterMap = new Map();
+
+    for (let char of str) {
+        if (char !== ' ') { 
+            char = char.toLowerCase();
+            letterMap.set(char, (letterMap.get(char) || 0) + 1);
+        }
+    }
+
+    return letterMap;
+}
+
+let inputString = "Hello World";
+let result = countLetterOccurrences(inputString);
+
+console.log("Letter occurrences:");
+for (let [key, value] of result) {
+    console.log(`${key}: ${value}`);
+}
+
+    </script> -->
+    <script>
+        class Person {
+    constructor(name, age) {
+        this._name = name;
+        this._age = age;
+    }
+
+
+    get name() {
+        return this._name;
+    }
+
+    
+    set name(newName) {
+        if (newName.length > 0) {
+            this._name = newName;
+        } else {
+            console.log("Name cannot be empty.");
+        }
+    }
+
+    
+    get age() {
+        return this._age;
+    }
+
+
+    set age(newAge) {
+        if (newAge > 0) {
+            this._age = newAge;
+        } else {
+            console.log("Age must be positive.");
+        }
+    }
+}
+
+
+let person = new Person("Sathya", 24);
+
+console.log(person.name); // Sathya
+person.name = "Arun"; // Setting new name
+console.log(person.name); // Arun
+
+console.log(person.age); // 24
+person.age = -5; // Invalid input, will show error message
+
+    </script>
+</body>
+</html>

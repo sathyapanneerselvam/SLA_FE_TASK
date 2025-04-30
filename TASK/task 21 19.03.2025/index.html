@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        class Student {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Instance method
+    displayInfo() {
+        console.log(`Name: ${this.name}, Age: ${this.age}`);
+    }
+
+    // Static method
+    static schoolName() {
+        return "ABC International School";
+    }
+}
+
+// Creating an instance of the class
+let student1 = new Student("Sathya", 24);
+student1.displayInfo(); // Output: Name: Sathya, Age: 24
+
+// Accessing the static method (Note: It is called on the class, not an instance)
+console.log(Student.schoolName()); // Output: ABC International School
+
+    </script> -->
+    <script>
+        // Base class: Account
+class Account {
+    constructor(accountNumber, holderName, balance) {
+        this.accountNumber = accountNumber;
+        this.holderName = holderName;
+        this.balance = balance;
+    }
+
+    deposit(amount) {
+        if (amount > 0) {
+            this.balance += amount;
+            console.log(`Deposited ₹${amount}. New balance: ₹${this.balance}`);
+        } else {
+            console.log("Deposit amount must be positive.");
+        }
+    }
+
+    withdraw(amount) {
+        if (amount > 0 && amount <= this.balance) {
+            this.balance -= amount;
+            console.log(`Withdrawn ₹${amount}. Remaining balance: ₹${this.balance}`);
+        } else {
+            console.log("Invalid withdrawal amount or insufficient balance.");
+        }
+    }
+
+    displayBalance() {
+        console.log(`Account Balance: ₹${this.balance}`);
+    }
+}
+
+// Derived class: SavingAccount
+class SavingAccount extends Account {
+    constructor(accountNumber, holderName, balance, interestRate) {
+        super(accountNumber, holderName, balance);
+        this.interestRate = interestRate;
+    }
+
+    addInterest() {
+        let interest = (this.balance * this.interestRate) / 100;
+        this.balance += interest;
+        console.log(`Interest added: ₹${interest}. New balance: ₹${this.balance}`);
+    }
+}
+
+// Derived class: CurrentAccount
+class CurrentAccount extends Account {
+    constructor(accountNumber, holderName, balance, overdraftLimit) {
+        super(accountNumber, holderName, balance);
+        this.overdraftLimit = overdraftLimit;
+    
+
+    </script>
+
+</body>
+</html>
